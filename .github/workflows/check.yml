@@ -1,0 +1,23 @@
+name: Check model integrity
+
+on: [push, pull_request]
+
+jobs:
+  integrity-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Instalar dependencias
+      run: |
+        pip install -r requirements.txt
+
+    - name: Ejecutar verificación de integridad
+      run: python check_integrity.py
