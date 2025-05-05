@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 scikit-learn
 joblib
-=======
-scikit-learn
-joblib
->>>>>>> 7a7e51dcc8535757c7d45ef09ad3374d5ac3aba7
