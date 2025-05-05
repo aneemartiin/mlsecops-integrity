@@ -3,7 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import hashlib
 
-# Entrenar modelo
+#Entrenar
 X, y = load_iris(return_X_y=True)
 clf = RandomForestClassifier()
 clf.fit(X, y)
