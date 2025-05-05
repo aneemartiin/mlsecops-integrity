@@ -8,6 +8,7 @@ WORKDIR /app
 COPY check_integrity.py .
 COPY model.pkl .
 COPY model_hash.txt .
+COPY model_metadata.json .
 COPY requirements.txt .
 
 # Instalar dependencias
