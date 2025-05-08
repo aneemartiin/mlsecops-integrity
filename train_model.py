@@ -34,4 +34,4 @@ metadata = {
 with open("model_metadata.json", "w") as f:
     json.dump(metadata, f, indent=2)
 
-print("✅ Modelo entrenado y guardado con hash:", model_hash)
+print("Modelo entrenado y guardado con hash:", model_hash)

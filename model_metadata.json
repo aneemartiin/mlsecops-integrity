@@ -1,9 +1,9 @@
 {
-  "created_at": "2025-05-05T16:58:06.092665",
+  "created_at": "2025-05-08T10:34:35.063822",
   "model_type": "RandomForestClassifier",
   "input_shape": [
     150,
     4
   ],
-  "file_size_bytes": 189713
+  "file_size_bytes": 197105
 }

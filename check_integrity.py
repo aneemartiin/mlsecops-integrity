@@ -14,9 +14,9 @@ with open("model_hash.txt", "r") as f:
 
 # Comparar
 if current_hash == original_hash:
-    print("✅ Modelo íntegro. No ha sido manipulado.")
+    print("Modelo íntegro: No ha sido manipulado.")
 else:
-    print("❌ ALERTA: Modelo manipulado o corrupto.")
+    print("CUIDADO: Modelo manipulado o corrupto.")
 
 
 
@@ -26,19 +26,19 @@ with open("model_metadata.json", "r") as f:
 
 actual_size = os.path.getsize("model.pkl")
 if actual_size != expected["file_size_bytes"]:
-    print("❌ Tamaño del archivo no coincide con los metadatos.")
+    print("INCORRECTO: Tamaño del archivo no coincide con los metadatos.")
 else:
-    print("✅ Tamaño del archivo verificado.")
+    print("CORRECTO: Tamaño del archivo verificado.")
 
 # Cargar modelo para comprobar tipo
 model = joblib.load("model.pkl")
 actual_type = type(model).__name__
 
 if actual_type != expected["model_type"]:
-    print(f"❌ Tipo de modelo diferente: se esperaba {expected['model_type']} pero se encontró {actual_type}.")
+    print(f"INCORRECTO: Tipo de modelo diferente: se esperaba {expected['model_type']} pero se encontró {actual_type}.")
 else:
-    print("✅ Tipo de modelo correcto.")
+    print("CORRECTO: Tipo de modelo correcto.")
 
 # Mostrar info de creación (no se puede verificar directamente sin firma temporal, pero se muestra)
-print(f"📅 Fecha de creación registrada: {expected['created_at']}")
-print(f"📐 Forma esperada del input: {expected['input_shape']}")
+print(f"Fecha de creación registrada: {expected['created_at']}")
+print(f"Forma esperada del input: {expected['input_shape']}")
